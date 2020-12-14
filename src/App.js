@@ -1,13 +1,18 @@
 import { Home } from "./pages/Home";
 import "./styles/app.scss"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
- 
+
   return (
     <div className="App">
-    <Home />
+      <Router>
+        <Route path={['/game/:id', '/']}>
+          <Home />
+        </Route>
+      </Router>
     </div>
-  ); 
+  );
 }
 
 export default App;
