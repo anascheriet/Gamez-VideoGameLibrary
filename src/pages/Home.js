@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadGames } from "../actions/gameActions";
 import { Game } from '../components/Game';
+import { GameDetail } from '../components/GameDetail';
 import "../styles/home.scss"
 
 
@@ -17,6 +18,7 @@ export const Home = () => {
     const { popular, newGames, upcoming } = useSelector(state => state.games);
     return (
         <div className="GameList">
+            <GameDetail />
             <h2>Upcoming Games</h2>
             <div className="Games">
                 {upcoming.map(game => (
