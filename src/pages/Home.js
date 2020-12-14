@@ -24,6 +24,20 @@ export const Home = () => {
                         id={game.id} image={game.background_image} />
                 ))}
             </div>
+            <h2>New Games</h2>
+            <div className="Games">
+                {newGames.map(game => (
+                    <Game key={game.id} name={game.name} released={game.released}
+                        id={game.id} image={game.background_image} />
+                ))}
+            </div>
+            <h2>Popular Games</h2>
+            <div className="Games">
+                {popular.map(game => (
+                    <Game key={game.id} name={game.name} released={game.released}
+                        id={game.id} image={game.background_image} />
+                ))}
+            </div>
         </div>
     )
 }
