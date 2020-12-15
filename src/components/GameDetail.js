@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom';
 import "../styles/gameDetails.scss"
 
-export const GameDetail = () => {
+export const GameDetail = ({ pathId }) => {
 
     //Data
     const { game, screenshots, isLoading } = useSelector(state => state.gameDetail);
@@ -22,11 +22,14 @@ export const GameDetail = () => {
     return (
         <>
             {!isLoading && (
-                <motion.div className="card-shadow" onClick={exitCardHandlr}>
-                    <motion.div className="detail">
+                <motion.div
+                    className="card-shadow" onClick={exitCardHandlr}>
+                    <motion.div
+                        /* I added the layoutId because framer motion needs an id for each component it uses */
+                        layoutId={pathId} className="detail">
                         <motion.div className="stats">
                             <motion.div className="rating">
-                                <h3>{game.name}</h3>
+                                <motion.h3 layoutId={`h3 ${pathId}`}>{game.name}</motion.h3>
                                 <p>Rating: {game.rating}</p >
                             </motion.div>
                             <motion.div className="info">
@@ -39,7 +42,7 @@ export const GameDetail = () => {
                             </motion.div>
                         </motion.div>
                         <motion.div className="media">
-                            <img src={game.background_image} alt="image" />
+                            <motion.img layoutId={`image ${pathId}`} src={game.background_image} alt="image" />
                         </motion.div>
                         <div className="description">
                             <p>{game.description_raw}</p>

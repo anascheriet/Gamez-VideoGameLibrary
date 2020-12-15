@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -14,13 +15,16 @@ export const Game = ({ name, released, image, id }) => {
         dispatch(loadDetail(id));
     }
     return (
-        <div onClick={loadDetailHandlr} className="styledGame">
+
+
+        /* the id of the involved animated components should have the same type(here string) */
+        <motion.div layoutId={id.toString()} onClick={loadDetailHandlr} className="styledGame">
             <Link to={`/game/${id}`}>
-                <h3>{name}</h3>
+                <motion.h3 layoutId={`h3 ${id.toString()}`}>{name}</motion.h3>
                 <p>{released}</p>
-                <img src={image} alt="img" />
+                <motion.img layoutId={`image ${id.toString()}`} src={image} alt="img" />
             </Link>
 
-        </div>
+        </motion.div>
     )
 };
