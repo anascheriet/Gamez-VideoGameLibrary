@@ -9,6 +9,8 @@ export const Game = ({ name, released, image, id }) => {
     //Load game details
     const dispatch = useDispatch();
     const loadDetailHandlr = () => {
+        //Hide home scroll bar
+        document.body.style.overflow = "hidden";
         dispatch(loadDetail(id));
     }
     return (
