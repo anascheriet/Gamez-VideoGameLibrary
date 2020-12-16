@@ -10,7 +10,8 @@ import apple from "../img/apple.svg";
 import nintendo from "../img/nintendo.svg";
 import gamepad from "../img/gamepad.svg";
 import steam from "../img/steam.svg";
-
+import emptyStar from "../img/star-empty.svg";
+import fullStar from "../img/star-full.svg";
 export const GameDetail = ({ pathId }) => {
 
     //Data
@@ -50,6 +51,21 @@ export const GameDetail = ({ pathId }) => {
         }
     }
 
+    //get start icon from game rating
+    const getStars = () => {
+        const stars = [];
+        const rating = Math.floor(game.rating);
+        for (let i = 1; i <= 5; i++) {
+            if (i <= rating) {
+                stars.push(<img key={i} alt="star" src={fullStar}></img>)
+            }
+            else {
+                stars.push(<motion.img key={i} alt="star" src={emptyStar}></motion.img>)
+            }
+        }
+        return stars;
+    }
+
     return (
         <>
             {!isLoading && (
@@ -62,12 +78,13 @@ export const GameDetail = ({ pathId }) => {
                             <motion.div className="rating">
                                 <motion.h3 layoutId={`h3 ${pathId}`}>{game.name}</motion.h3>
                                 <p>Rating: {game.rating}</p >
+                                {getStars()}
                             </motion.div>
                             <motion.div className="info">
                                 <h3>Platforms</h3>
                                 <motion.div className="platforms">
                                     {game.platforms.map(data => (
-                                            <img src={getPlatform(data.platform.name)} alt={data.platform.name} title={data.platform.name}/>
+                                        <img src={getPlatform(data.platform.name)} alt={data.platform.name} title={data.platform.name} />
                                     ))}
                                 </motion.div>
                             </motion.div>

@@ -37,7 +37,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
+  img {
+    width: 2rem;
+    height: 2rem;
+    display: inline;
+  }
 }
 
 .info {
@@ -64,9 +68,8 @@
   margin: 5rem 0rem;
 }
 
-.rating {
+/* .rating {
   display: flex;
   flex-direction: column;
 }
-
-
+ */
