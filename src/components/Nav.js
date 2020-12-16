@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { fetchSearch } from '../actions/gameActions'
-import logo from "../img/gamepad.svg"
+import logo from "../img/joystick.svg"
 import "../styles/Nav.scss"
 
 export const Nav = () => {
