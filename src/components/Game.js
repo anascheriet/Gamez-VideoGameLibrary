@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import detailActions from '../actions/detailsActions';
 import "../styles/game.scss"
-import { resizeImage } from '../util';
+import {resizeImage} from '../util';
 
 export const Game = ({ name, released, image, id }) => {
 
