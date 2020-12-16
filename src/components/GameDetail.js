@@ -25,6 +25,7 @@ export const GameDetail = ({ pathId }) => {
     }
 
     const stopevent = (e) => {
+        //make game detail unclickable
         e.stopPropagation();
         e.nativeEvent.stopImmediatePropagation();
     }

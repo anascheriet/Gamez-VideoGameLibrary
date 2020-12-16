@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import detailActions from '../actions/detailsActions';
 import "../styles/game.scss"
+import { resizeImage } from '../util';
 
 export const Game = ({ name, released, image, id }) => {
 
@@ -29,7 +30,7 @@ export const Game = ({ name, released, image, id }) => {
             <Link to={`/game/${id}`}>
                 <motion.h3 layoutId={`h3 ${id.toString()}`}>{name}</motion.h3>
                 <p>{released}</p>
-                <motion.img layoutId={`image ${id.toString()}`} src={image} alt="img" />
+                <motion.img layoutId={`image ${id.toString()}`} src={resizeImage(image, 640)} alt="img" />
             </Link>
 
         </motion.div>
