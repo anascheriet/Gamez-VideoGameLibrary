@@ -32,16 +32,21 @@ const upcoming_games = `games?dates=${currentDate},${nextYear}&ordering=-added&p
 //New Games
 const new_games = `games?dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
 
+
 const popularGamesUrl = `${base_url}${popular_games}`;
 const upcomingGamesUrl = `${base_url}${upcoming_games}`
 const newGamesUrl = `${base_url}${new_games}`;
 const gameDetailsUrl = (id) => { return `${base_url}games/${id}`; }
 const gameScreenshotsUrl = (id) => { return `${base_url}games/${id}/screenshots`; }
 
+//Searched Game
+const searchGameUrl = (game_name) => `${base_url}games?search=${game_name}&page-size=9`;
+
 export default {
     popularGamesUrl,
     upcomingGamesUrl,
     newGamesUrl,
     gameDetailsUrl,
-    gameScreenshotsUrl
+    gameScreenshotsUrl,
+    searchGameUrl
 };

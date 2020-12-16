@@ -21,7 +21,7 @@ export const Home = () => {
     }, []);
 
     //Get State
-    const { popular, newGames, upcoming } = useSelector(state => state.games);
+    const { popular, newGames, upcoming, searched } = useSelector(state => state.games);
     return (
         <motion.div className="GameList">
             <AnimateSharedLayout type="crossfade">
@@ -30,13 +30,25 @@ export const Home = () => {
                     {/* The component that will be animated should have a conditional toggle, pathId here */}
                     {pathId && <GameDetail pathId={pathId} />}
                 </AnimatePresence>
+                {searched.length ? (
+                    <div className="searchedGames">
+                        <h2>Searched Games</h2>
+                        <div className="Games">
+                            {searched.map(game => (
+                                <Game key={game.id} name={game.name} released={game.released}
+                                    id={game.id} image={game.background_image} />
+                            ))}
+                        </div>
+                    </div>) : ''}
                 <h2>Upcoming Games</h2>
                 <div className="Games">
                     {upcoming.map(game => (
                         <Game key={game.id} name={game.name} released={game.released}
                             id={game.id} image={game.background_image} />
                     ))}
+
                 </div>
+
                 <h2>New Games</h2>
                 <div className="Games">
                     {newGames.map(game => (
