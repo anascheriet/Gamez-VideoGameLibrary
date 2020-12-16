@@ -16,6 +16,7 @@
   &::-webkit-scrollbar-track {
     background: white;
   }
+  z-index: 10;
 }
 
 .detail {
@@ -29,6 +30,7 @@
   img {
     width: 100%;
   }
+  z-index: 100;
 }
 
 .stats {
@@ -66,3 +68,5 @@
   display: flex;
   flex-direction: column;
 }
+
+

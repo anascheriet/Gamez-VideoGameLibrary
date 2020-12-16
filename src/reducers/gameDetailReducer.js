@@ -1,6 +1,6 @@
 const initialState = {
-    game: { platforms: [] },
-    screenshots: [],
+    game: {},
+    screenshots: {},
     isLoading: true
 }
 

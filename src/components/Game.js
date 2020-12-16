@@ -1,22 +1,29 @@
 import { motion } from 'framer-motion';
 import React from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { loadDetail } from '../actions/detailsActions';
+import detailActions from '../actions/detailsActions';
 import "../styles/game.scss"
 
 export const Game = ({ name, released, image, id }) => {
+
+    //get IsLoading 
+    const { isLoading } = useSelector(state => state.gameDetail);
 
     //Load game details
     const dispatch = useDispatch();
     const loadDetailHandlr = () => {
         //Hide home scroll bar
         document.body.style.overflow = "hidden";
-        dispatch(loadDetail(id));
+        dispatch(detailActions.loadDetail(id));
+        console.log(isLoading);
     }
+
+    const log = () => {
+        console.log(isLoading);
+    }
+
     return (
-
-
         /* the id of the involved animated components should have the same type(here string) */
         <motion.div layoutId={id.toString()} onClick={loadDetailHandlr} className="styledGame">
             <Link to={`/game/${id}`}>

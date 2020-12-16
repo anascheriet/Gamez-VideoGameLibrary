@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom';
+import detailsActions from '../actions/detailsActions';
 import "../styles/gameDetails.scss"
 
 export const GameDetail = ({ pathId }) => {
@@ -12,19 +13,27 @@ export const GameDetail = ({ pathId }) => {
     //Url redirector
     const history = useHistory();
 
+    //const dispatch = useDispatch();
+
     const exitCardHandlr = (e) => {
         const element = e.target;
-        if (element.classList.contains("card-shadow")) {
+        if (element.classList.contains('card-shadow')) {
             document.body.style.overflow = "auto";
             history.push('/');
+            //dispatch(detailsActions.exitcard());
         }
+    }
+
+    const stopevent = (e) => {
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
     }
     return (
         <>
             {!isLoading && (
                 <motion.div
                     className="card-shadow" onClick={exitCardHandlr}>
-                    <motion.div
+                    <motion.div onClick={stopevent}
                         /* I added the layoutId because framer motion needs an id for each component it uses */
                         layoutId={pathId} className="detail">
                         <motion.div className="stats">
