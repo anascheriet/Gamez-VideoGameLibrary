@@ -14,14 +14,14 @@ html {
   }
 }
 
-body{
-  font-family: 'Montserrat', sans-serif;
+body {
+  font-family: "Montserrat", sans-serif;
   width: 100%;
 }
 
 h2 {
   font-size: 3rem;
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Abril Fatface", cursive;
   font-weight: lighter;
   color: #333;
 }
@@ -45,6 +45,11 @@ a {
 
 img {
   display: block;
+}
+
+input {
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
 }
 @import "./home.scss";
 @import "./game.scss";

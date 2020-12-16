@@ -1,0 +1,35 @@
+.StyledNav {
+  padding: 3rem 5rem;
+  text-align: center;
+  input {
+    width: 30%;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border: none;
+    margin-top: 1rem;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    outline: none;
+  }
+
+  button {
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    background: #ff7676;
+    color: white;
+  }
+  h1 {
+    color: #565656;
+    position: relative;
+    left: 7px;
+    top: 17px;
+  }
+}
+
+.Logo {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    cursor: pointer;
+}
