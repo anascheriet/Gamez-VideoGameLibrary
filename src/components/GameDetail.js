@@ -104,7 +104,7 @@ export const GameDetail = ({ pathId }) => {
                             <p>{game.description_raw}</p>
                         </div>
 
-                        <AliceCarousel autoPlay autoPlayInterval="3000">
+                        <AliceCarousel autoPlay infinite animationType="fadeout" autoPlayInterval="2000" animationType="fadeout" mouseTracking autoPlayStrategy="default">
                             {screenshots.map(screen => (
                                 <img className="sliderimg" src={resizeImage(screen.image, 640)} key={screen.id} alt="screenshot" />
                             ))}
