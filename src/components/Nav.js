@@ -11,7 +11,7 @@ export const Nav = () => {
     //dispatch the action
     const dispatch = useDispatch();
 
-    //Inpout state
+    //Input state
     const [textInput, setTextInput] = useState("");
 
     const inputChangeHandler = (e) => {
@@ -29,6 +29,7 @@ export const Nav = () => {
         dispatch(fetchSearch(textInput));
         setTextInput("");
     }
+
     return (
 
         <div>
@@ -41,7 +42,7 @@ export const Nav = () => {
                     </motion.div>
 
                 <form className="search" onSubmit={(e) => searchGameHandler(e)}>
-                    <input type="text" onChange={inputChangeHandler} />
+                    <input type="text" onChange={inputChangeHandler} value={textInput} />
                     <button type="submit">Search</button>
                 </form>
 
