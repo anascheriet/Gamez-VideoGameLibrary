@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 import { fetchSearch } from '../actions/gameActions'
 import { fadeIn } from '../animations'
 import logo from "../img/logo.svg"
+import git from "../img/github.svg";
 import "../styles/Nav.scss"
 
 export const Nav = () => {
@@ -30,12 +31,16 @@ export const Nav = () => {
         setTextInput("");
     }
     return (
+
         <div>
             <motion.div className="StyledNav" variants={fadeIn} initial="hidden" animate="show">
-                <motion.div onClick={clearSearched} className="Logo">
-                    <img src={logo} alt="logo" />
-                    <h1>Gamez</h1>
-                </motion.div>
+
+                
+                    <motion.div onClick={clearSearched} className="Logo">
+                        <img src={logo} alt="logo" />
+                        <h1>Gamez</h1>
+                    </motion.div>
+
                 <form className="search" onSubmit={(e) => searchGameHandler(e)}>
                     <input type="text" onChange={inputChangeHandler} />
                     <button type="submit">Search</button>

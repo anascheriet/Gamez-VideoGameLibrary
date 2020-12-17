@@ -12,3 +12,48 @@
   grid-column-gap: 3rem;
   grid-row-gap: 3rem;
 }
+
+
+$buttons-height: 24px;
+$sticky-width: 3.3rem;
+$padding: 10px;
+
+.sticky-container {
+  background-color: transparent;
+  padding-top: $padding;
+  padding-left: $padding;
+  padding-bottom: $padding;
+  padding-right: 3px;
+	position: fixed;
+	top: 50%;
+	right: 0px;
+	width: 0px;
+	height: auto;
+	z-index: 9999;
+	margin-top: -$buttons-height;
+  text-align: center;
+  margin-right: 2rem;
+  
+  &:hover {
+    width: $sticky-width;
+  }
+  
+	a {
+		padding:0 !important;
+		display: block;
+		text-align: left;
+		height: $buttons-height;
+		width: $sticky-width;
+		padding: 8px 16px;
+		color: #ff7676;
+		font-family: Arial, sans-serif;
+		font-size: 17px;
+		font-weight: bold;
+		text-decoration: none;
+    
+    img {
+      width: 5rem;
+      height: 4rem;
+    }
+	}
+}

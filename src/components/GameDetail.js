@@ -10,6 +10,8 @@ import apple from "../img/apple.svg";
 import nintendo from "../img/nintendo.svg";
 import gamepad from "../img/gamepad.svg";
 import steam from "../img/steam.svg";
+import android from "../img/android.svg";
+import linux from "../img/linux.svg";
 import emptyStar from "../img/star-empty.svg";
 import fullStar from "../img/star-full.svg";
 export const GameDetail = ({ pathId }) => {
@@ -42,10 +44,15 @@ export const GameDetail = ({ pathId }) => {
         switch (platform) {
             case "PC": return steam;
             case "iOS": return apple;
+            case "macOS": return apple;
+            case "PlayStation 2": return playstation;
+            case "PlayStation 3": return playstation;
             case "PlayStation 4": return playstation;
             case "PlayStation 5": return playstation;
             case "Nintendo Switch": return nintendo;
             case "Xbox One": return xbox;
+            case "Xbox 360": return xbox;
+            case "Xbox": return xbox;
             case "Xbox Series S/X": return xbox;
             default: return gamepad;
         }
