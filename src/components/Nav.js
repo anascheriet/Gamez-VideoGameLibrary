@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux'
 import { fetchSearch } from '../actions/gameActions'
 import { fadeIn } from '../animations'
 import logo from "../img/logo.svg"
-import git from "../img/github.svg";
 import "../styles/Nav.scss"
 
 export const Nav = () => {

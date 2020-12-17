@@ -10,8 +10,6 @@ import apple from "../img/apple.svg";
 import nintendo from "../img/nintendo.svg";
 import gamepad from "../img/gamepad.svg";
 import steam from "../img/steam.svg";
-import android from "../img/android.svg";
-import linux from "../img/linux.svg";
 import emptyStar from "../img/star-empty.svg";
 import fullStar from "../img/star-full.svg";
 export const GameDetail = ({ pathId }) => {

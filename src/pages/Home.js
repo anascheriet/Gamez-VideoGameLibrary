@@ -26,7 +26,7 @@ export const Home = () => {
         <>
             <div class="sticky-container">
                 <div class="button-container">
-                    <a title="Source code" href="https://github.com/anascheriet/Gamez-VideoGameLibrary" target="_blank"><img src={git} /></a>
+                    <a title="Source code" href="https://github.com/anascheriet/Gamez-VideoGameLibrary" target="_blank" rel="noreferrer"><img src={git} alt="github" /></a>
                 </div>
             </div>
             <motion.div className="GameList" variants={fadeIn} initial="hidden" animate="show">
