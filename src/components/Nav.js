@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { fetchSearch } from '../actions/gameActions'
 import { fadeIn } from '../animations'
-import logo from "../img/joystick.svg"
+import logo from "../img/logo.svg"
 import "../styles/Nav.scss"
 
 export const Nav = () => {
@@ -20,6 +20,7 @@ export const Nav = () => {
 
     const clearSearched = () => {
         dispatch({ type: "Clear_Searched" });
+        setTextInput("");
     }
 
     //search function
