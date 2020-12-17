@@ -26,13 +26,13 @@ export const Nav = () => {
     const searchGameHandler = (e) => {
         e.preventDefault();
         dispatch(fetchSearch(textInput));
-        setTextInput('');
+        setTextInput("");
     }
     return (
         <div>
             <motion.div className="StyledNav" variants={fadeIn} initial="hidden" animate="show">
                 <motion.div onClick={clearSearched} className="Logo">
-                    <img src={logo} alt="image" />
+                    <img src={logo} alt="logo" />
                     <h1>Gamez</h1>
                 </motion.div>
                 <form className="search" onSubmit={(e) => searchGameHandler(e)}>

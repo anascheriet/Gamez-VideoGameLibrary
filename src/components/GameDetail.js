@@ -97,7 +97,7 @@ export const GameDetail = ({ pathId }) => {
                         </div>
                         <div className="gallery">
                             {screenshots.map(screen => (
-                                <img src={resizeImage(screen.image, 640)} key={screen.id} alt="image" />
+                                <img src={resizeImage(screen.image, 640)} key={screen.id} alt="screenshot" />
                             ))}
                         </div>
                     </motion.div>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import detailActions from '../actions/detailsActions';
 import { popup } from '../animations';
@@ -9,8 +9,8 @@ import { resizeImage } from '../util';
 
 export const Game = ({ name, released, image, id }) => {
 
-    //get IsLoading 
-    const { isLoading } = useSelector(state => state.gameDetail);
+/*     //get IsLoading 
+    const { isLoading } = useSelector(state => state.gameDetail); */
 
     //Load game details
     const dispatch = useDispatch();
@@ -18,11 +18,7 @@ export const Game = ({ name, released, image, id }) => {
         //Hide home scroll bar
         document.body.style.overflow = "hidden";
         dispatch(detailActions.loadDetail(id));
-        console.log(isLoading);
-    }
-
-    const log = () => {
-        console.log(isLoading);
+        //console.log(isLoading);
     }
 
     return (
