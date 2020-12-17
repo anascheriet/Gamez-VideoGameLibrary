@@ -1,3 +1,6 @@
+# General
+This mini React video game library was made using the [rawg.io api](https://rawg.io/apidocs) and [Redux](https://redux.js.org) for state management.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
