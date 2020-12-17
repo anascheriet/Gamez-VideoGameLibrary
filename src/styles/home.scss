@@ -14,20 +14,20 @@
 }
 
 
-$buttons-height: 24px;
+$buttons-height: 1.5rem;
 $sticky-width: 3.3rem;
-$padding: 10px;
+$padding: 0.5rem;
 
 .sticky-container {
   background-color: transparent;
   padding-top: $padding;
   padding-left: $padding;
   padding-bottom: $padding;
-  padding-right: 3px;
+  padding-right: $padding;
 	position: fixed;
 	top: 50%;
-	right: 0px;
-	width: 0px;
+	right: 0rem;
+	width: 0rem;
 	height: auto;
 	z-index: 9999;
 	margin-top: -$buttons-height;
@@ -44,10 +44,10 @@ $padding: 10px;
 		text-align: left;
 		height: $buttons-height;
 		width: $sticky-width;
-		padding: 8px 16px;
+		padding: 0.5rem 1rem;
 		color: #ff7676;
 		font-family: Arial, sans-serif;
-		font-size: 17px;
+		font-size: 1rem;
 		font-weight: bold;
 		text-decoration: none;
     
