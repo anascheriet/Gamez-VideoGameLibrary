@@ -12,6 +12,9 @@ import gamepad from "../img/gamepad.svg";
 import steam from "../img/steam.svg";
 import emptyStar from "../img/star-empty.svg";
 import fullStar from "../img/star-full.svg";
+import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
+
 export const GameDetail = ({ pathId }) => {
 
     //Data
@@ -95,16 +98,18 @@ export const GameDetail = ({ pathId }) => {
                             </motion.div>
                         </motion.div>
                         <motion.div className="media">
-                            <motion.img layoutId={`image ${pathId}`} src={resizeImage(game.background_image, 640)} alt="image" />
+                            <motion.img layoutId={`image ${pathId}`} src={game.background_image} alt="image" />
                         </motion.div>
                         <div className="description">
                             <p>{game.description_raw}</p>
                         </div>
-                        <div className="gallery">
+
+                        <AliceCarousel autoPlay autoPlayInterval="3000">
                             {screenshots.map(screen => (
-                                <img src={resizeImage(screen.image, 640)} key={screen.id} alt="screenshot" />
+                                <img className="sliderimg" src={resizeImage(screen.image, 640)} key={screen.id} alt="screenshot" />
                             ))}
-                        </div>
+                        </AliceCarousel>
+
                     </motion.div>
                 </motion.div>
             )}
