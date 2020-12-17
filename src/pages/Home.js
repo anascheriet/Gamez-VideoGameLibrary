@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from 'react-router-dom';
 import { loadGames } from "../actions/gameActions";
+import { fadeIn } from '../animations';
 import { Game } from '../components/Game';
 import { GameDetail } from '../components/GameDetail';
 import "../styles/home.scss"
@@ -23,7 +24,7 @@ export const Home = () => {
     //Get State
     const { popular, newGames, upcoming, searched } = useSelector(state => state.games);
     return (
-        <motion.div className="GameList">
+        <motion.div className="GameList" variants={fadeIn} initial="hidden" animate="show">
             <AnimateSharedLayout type="crossfade">
                 {/* wrap all the components that will be transitioning*/}
                 <AnimatePresence>

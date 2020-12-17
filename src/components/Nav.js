@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { fetchSearch } from '../actions/gameActions'
+import { fadeIn } from '../animations'
 import logo from "../img/joystick.svg"
 import "../styles/Nav.scss"
 
@@ -29,14 +30,14 @@ export const Nav = () => {
     }
     return (
         <div>
-            <motion.div className="StyledNav">
+            <motion.div className="StyledNav" variants={fadeIn} initial="hidden" animate="show">
                 <motion.div onClick={clearSearched} className="Logo">
                     <img src={logo} alt="image" />
                     <h1>Gamez</h1>
                 </motion.div>
-                <form className="search">
+                <form className="search" onSubmit={(e) => searchGameHandler(e)}>
                     <input type="text" onChange={inputChangeHandler} />
-                    <button onClick={searchGameHandler} type="submit">Search</button>
+                    <button type="submit">Search</button>
                 </form>
 
             </motion.div>

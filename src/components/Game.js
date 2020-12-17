@@ -3,8 +3,9 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import detailActions from '../actions/detailsActions';
+import { popup } from '../animations';
 import "../styles/game.scss"
-import {resizeImage} from '../util';
+import { resizeImage } from '../util';
 
 export const Game = ({ name, released, image, id }) => {
 
@@ -26,7 +27,7 @@ export const Game = ({ name, released, image, id }) => {
 
     return (
         /* the id of the involved animated components should have the same type(here string) */
-        <motion.div layoutId={id.toString()} onClick={loadDetailHandlr} className="styledGame">
+        <motion.div layoutId={id.toString()} onClick={loadDetailHandlr} className="styledGame" variants={popup} initial="hidden" animate="show">
             <Link to={`/game/${id}`}>
                 <motion.h3 layoutId={`h3 ${id.toString()}`}>{name}</motion.h3>
                 <p>{released}</p>
