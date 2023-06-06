@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/Gamez-VideoGameLibrary/static/css/main.62aa39cb.chunk.css",
+    "main.js": "/Gamez-VideoGameLibrary/static/js/main.a737c3a3.chunk.js",
+    "main.js.map": "/Gamez-VideoGameLibrary/static/js/main.a737c3a3.chunk.js.map",
+    "runtime-main.js": "/Gamez-VideoGameLibrary/static/js/runtime-main.0668cee7.js",
+    "runtime-main.js.map": "/Gamez-VideoGameLibrary/static/js/runtime-main.0668cee7.js.map",
+    "static/css/2.01bdca31.chunk.css": "/Gamez-VideoGameLibrary/static/css/2.01bdca31.chunk.css",
+    "static/js/2.d36d043f.chunk.js": "/Gamez-VideoGameLibrary/static/js/2.d36d043f.chunk.js",
+    "static/js/2.d36d043f.chunk.js.map": "/Gamez-VideoGameLibrary/static/js/2.d36d043f.chunk.js.map",
+    "static/js/3.c6ca6120.chunk.js": "/Gamez-VideoGameLibrary/static/js/3.c6ca6120.chunk.js",
+    "static/js/3.c6ca6120.chunk.js.map": "/Gamez-VideoGameLibrary/static/js/3.c6ca6120.chunk.js.map",
+    "index.html": "/Gamez-VideoGameLibrary/index.html",
+    "static/css/2.01bdca31.chunk.css.map": "/Gamez-VideoGameLibrary/static/css/2.01bdca31.chunk.css.map",
+    "static/css/main.62aa39cb.chunk.css.map": "/Gamez-VideoGameLibrary/static/css/main.62aa39cb.chunk.css.map",
+    "static/js/2.d36d043f.chunk.js.LICENSE.txt": "/Gamez-VideoGameLibrary/static/js/2.d36d043f.chunk.js.LICENSE.txt",
+    "static/media/apple.5757c37e.svg": "/Gamez-VideoGameLibrary/static/media/apple.5757c37e.svg",
+    "static/media/gamepad.a7d81632.svg": "/Gamez-VideoGameLibrary/static/media/gamepad.a7d81632.svg",
+    "static/media/github.478f8772.svg": "/Gamez-VideoGameLibrary/static/media/github.478f8772.svg",
+    "static/media/logo.8a013a28.svg": "/Gamez-VideoGameLibrary/static/media/logo.8a013a28.svg",
+    "static/media/nintendo.f579be04.svg": "/Gamez-VideoGameLibrary/static/media/nintendo.f579be04.svg",
+    "static/media/playstation.18cc4b9c.svg": "/Gamez-VideoGameLibrary/static/media/playstation.18cc4b9c.svg",
+    "static/media/star-empty.36e65d41.svg": "/Gamez-VideoGameLibrary/static/media/star-empty.36e65d41.svg",
+    "static/media/star-full.70b242c2.svg": "/Gamez-VideoGameLibrary/static/media/star-full.70b242c2.svg",
+    "static/media/steam.d7b8819f.svg": "/Gamez-VideoGameLibrary/static/media/steam.d7b8819f.svg",
+    "static/media/xbox.3e7db735.svg": "/Gamez-VideoGameLibrary/static/media/xbox.3e7db735.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0668cee7.js",
+    "static/css/2.01bdca31.chunk.css",
+    "static/js/2.d36d043f.chunk.js",
+    "static/css/main.62aa39cb.chunk.css",
+    "static/js/main.a737c3a3.chunk.js"
+  ]
+}
