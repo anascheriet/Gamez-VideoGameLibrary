@@ -1,7 +1,7 @@
 # General
 This mini React video game library was made using the [rawg.io api](https://rawg.io/apidocs) and [Redux](https://redux.js.org) for state management.
 
-[Link to the app](https://gamezapp.herokuapp.com)
+[Link to the app](http://anascheriet.github.io/Gamez-VideoGameLibrary)
 
 # Getting Started with Create React App
 
